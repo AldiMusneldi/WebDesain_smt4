@@ -1,0 +1,273 @@
+/*CSS Reset*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+    scroll-behavior: smooth;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+ol, ul {
+	list-style: none;
+}
+
+blockquote, q {
+	quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*CSS Style*/
+
+body{
+    color: #333;
+    font: 16px/28px;
+    font-family: 'Lucida Calligraphy', 'Kristen ITC';
+    background: rgb(2,48,71);
+    background: linear-gradient(90deg, rgba(2,48,71,1) 5%, rgba(14,92,118,1) 10%, 
+    rgba(33,158,188,1) 16%, rgba(33,158,188,1) 20%, rgba(33,158,188,1) 80%, 
+    rgba(33,158,188,1) 84%, rgba(14,92,118,1) 90%, rgba(2,48,71,1) 95%);
+}
+
+.badan{
+    width: 900px;
+    margin: auto;
+    background-color: #219ebc;
+}
+
+.badan .menu{
+    font-size: 30px;
+}
+
+.header{
+    padding: 20px;
+    padding-bottom: 10px;
+}
+
+.header .judul{
+    height: 80px;
+    font-size: 70px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 100px;
+    color: #FFB703;
+}
+
+/* Menu */
+
+.menu ul li{
+    display: inline-block;
+    margin: 0 10px 10px 10px;
+}
+
+.menu a{
+    text-decoration: none;
+    color: darkgray;
+    padding: 3px;
+}
+
+.menu {
+    text-align: center;
+}
+
+.menu a:hover {
+    background-color: #FB8500;
+    color: white;
+    border-radius: 33%;
+}
+
+/* Banner Image*/
+
+.banner {
+    height: 200px;
+    background-image: url(img/cyber.jpg);
+    background-size: cover;
+    background-position: 0;
+}
+
+/*Sidebar*/
+
+.sidebar {
+    width: 200px;
+    float: left;
+    padding: 20px;
+    color: #333;
+}
+
+.sidebar a {
+    text-decoration: none;
+    color: #333;
+}
+
+.sidebar a:hover {
+    background-color: #FB8500;
+    color: white;
+}
+
+/* Main */
+.main {
+    width: 660px;
+    padding: 20px;
+    box-sizing: border-box;
+    float: right;
+}
+
+.main img {
+    width: 122px;
+    height: 122px;
+    float: left;
+}
+
+.main h2 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.main p {
+    margin-bottom: 20px;
+    font-size: 12px;
+    text-align: justify;
+}
+
+.main ul li {
+    font-size: 12px;
+    text-align: justify;
+}
+
+
+/*footer*/
+.footer {
+    height: 50px;
+    background-color: #023047;
+    line-height: 50px;
+}
+
+.footer .copyright {
+    color: #FFB703;
+    font-size: 12px;
+    text-align: center;
+}
+
+.footer .copyright a {
+    text-decoration: none;
+    color: coral;
+}
+
+.footer .copyright a:hover {
+    background-color: tomato;
+    color: white;
+}
+
+/* Clearfix*/
+
+.cf:before, .cf:after {
+    content: "";
+    display: table;
+}
+
+.cf:after {
+    clear: both;
+}
+
+.cf {
+    *zoom: 1;
+}
+
+/* Add Content */
+.profil{
+    margin-top: 10px;
+    padding: 20px;
+    width: 614px;
+    float: right;
+    text-align: center;
+    border-style: solid;
+    border-width: 3px;
+    border-radius: 6%;
+    margin-bottom: 10px;
+}
+.profil img{
+    width: 200px;
+    height: 200px;
+    border-radius: 0;
+    
+}
+
+/*Gambar Produk*/
+.produk img{
+    border-radius: 20%;
+}
+
+
+/*Transition*/
+.main .content1 .border{
+    position: relative;
+}
+
+.main .content1 .border::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    box-sizing: border-box;
+    height: 0;
+    border-bottom: 3px solid transparent;
+    border-left: 3px solid  transparent;
+    transition: all .8s ease;
+}
+
+.main .content1 .border::after{
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 0;
+    box-sizing: border-box;
+    height: 0;
+    border-top: 3px solid transparent;
+    border-right: 3px solid  transparent;
+    transition: all .8s ease;
+}
+
+.main .content1:hover .border::after,
+.main .content1:hover .border::before{
+    border-color: #023047;
+    width: 100%;
+    height: 100%;
+}
+
+.badan .color{
+    background: rgb(10,114,166);
+    background: linear-gradient(90deg, rgba(10,114,166,1) 9%, rgba(2,48,71,1) 37%, 
+    rgba(2,48,71,1) 50%, rgba(2,48,71,1) 63%, rgba(10,114,166,1) 90%);
+}
